@@ -2,69 +2,229 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="style.css">
+<main>
+<Layout title='OpenStudioExtras'>
+	<div class="layout">
+		
+		<div class="w3-bar w3-black buttons-container">
+			<a href="/" class="w3-bar-item w3-button w3-mobile w3-grey">Home</a>
+			<a href="VR" class="w3-bar-item w3-button w3-mobile">OpenNoteBlockStudioVR</a>
+			<a href="Launcher" class="w3-bar-item w3-button w3-mobile">OpenStudioLauncher</a>
+			<a href="OS" class="w3-bar-item w3-button w3-mobile">PythonicOS</a>
+			<div class="w3-dropdown-hover w3-mobile">
+				<button class="w3-button">Extras <i class="fa fa-caret-down"></i></button>
+				<div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+					<a href="extras/VR" class="w3-bar-item w3-button w3-mobile">OpenNoteBlockStudioVR Extras</a>
+					<a href="extras/Launcher" class="w3-bar-item w3-button w3-mobile">OpenStudioLauncher Extras</a>
+					<a href="extras/OS" class="w3-bar-item w3-button w3-mobile">PythonicOS Extras</a>
+				</div>
+			</div>
+		</div>
+		<div class="colorfull">
+			<div class="center">
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to OpenStudioExtras!</h1>
-	<p>this site is dedicated to OpenStudio's major projects </p>
-	</main>
+				<h1>OpenStudioExtras</h1>
+				<h2>The best of the best, now with Extras!</h2>
+			</div>
+		</div>
+
+	</div>
+	
 </Layout>
+
+</main>
 
 <style>
 	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 15px;
+
+    line-height: 1.6;
+	font-family: 'Roboto', sans-serif;
+	/* fade in text without repeating */
+	color: #ff005d;text-shadow:0px 0px 5px #ff005d;
+
+}
+.center {
+    text-align: center;
+}
+.astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;	/* Add transition to the color property */
+}
+	/* Change the color on hover */
+	a:hover {
+		color: #ff0000; /* Replace with your desired color */
 	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
+
+a {
+	
+    color: #990099;
+    text-shadow: 0 0 50px #990099; /* Add glow effect */
+    text-decoration: none;
+    /* rounded buttons */
+    border-radius: 8px;
+	transition: color 0.3s ease;
+    overflow: hidden;
+
+}
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+/* rounded buttons */
+    border-radius: 8px;
+    overflow: hidden;
+}
+.colorfull {
+    /* text color */
+    color: #990099;
+    font-size: 20px;
+    line-height: 1.6;
+    /* shadow */
+	animation: drawLine1 5s infinite;
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+    h1 {
+        font-size: 5rem;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 1em;
+        
+    }
+	h2 {
+		font-size: 2rem;
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
+		animation: flicker4 5s infinite;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+    .text-gradient {
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+    }
+    .instructions {
+        margin-bottom: 2rem;
+        border: 1px solid rgba(var(--accent-light), 25%);
+        background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+    .instructions code {
+        font-size: 0.8em;
+        font-weight: bold;
+        background: rgba(var(--accent-light), 12%);
+        color: rgb(var(--accent-light));
+        border-radius: 4px;
+        padding: 0.3em 0.4em;
+    }
+    .instructions strong {
+        color: rgb(var(--accent-light));
+}
+.link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+}
+@keyframes drawLine1 {
+  0%  {stroke-dashoffset: -940px;}
+  100%{stroke-dashoffset: 0px;}
+}
+
+@keyframes drawLine2 {
+  0%  {stroke-dashoffset: -735px;}
+  100%{stroke-dashoffset: 0px;}
+}
+
+@keyframes drawLine3 {
+  0%  {stroke-dashoffset: -940px;}
+  100%{stroke-dashoffset: 0px;}
+}
+
+@keyframes flicker1{
+  0%  {stroke: #ff005d;}
+  1%  {stroke: transparent;}
+  3%  {stroke: transparent;}
+  4%  {stroke: #ff005d;}
+  6%  {stroke: #ff005d;}
+  7%  {stroke: transparent;}
+  13% {stroke: transparent;}
+  14% {stroke: #ff005d;}
+  100%{stroke: #ff005d;}
+}
+
+@keyframes flicker2{
+  0%  {stroke: #ff005d;}
+  50% {stroke: #ff005d;}
+  51% {stroke: transparent;}
+  61% {stroke: transparent;}
+  62% {stroke: #ff005d;}
+  100%{stroke: #ff005d;}
+}
+
+@keyframes flicker3{
+  0%  {stroke: #ff005d;}
+  1%  {stroke: transparent;}
+  10% {stroke: transparent;}
+  11% {stroke: #ff005d;}
+  40% {stroke: #ff005d;}
+  41% {stroke: transparent;}
+  45% {stroke: transparent;}
+  46% {stroke: #ff005d;}
+  100%{stroke: #ff005d;}
+}
+
+@keyframes flicker4{
+  0%  {color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+  30% {color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+  31% {color: #12000a;text-shadow:0px 0px 4px #12000a;}
+  32% {color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+  36% {color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+  37% {color: #12000a;text-shadow:0px 0px 4px #12000a;}
+  41% {color: #12000a;text-shadow:0px 0px 4px #12000a;}
+  42% {color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+  85% {color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+  86% {color: #12000a;text-shadow:0px 0px 4px #12000a;}
+  95% {color: #12000a;text-shadow:0px 0px 4px #12000a;}
+  96% {color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+  100%{color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+}
+
+@keyframes fadeInText{
+  1%  {color: #12000a;text-shadow:0px 0px 4px #12000a;}
+  70% {color: #ff005d;text-shadow:0px 0px 14px #ff005d;}
+ 90%{color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+ 100%  {color: #12000a;text-shadow:0px 0px 4px #12000a;}
+}
+
+@keyframes hueRotate{
+  0%  {
+    filter: hue-rotate(0deg);
+  }
+  50%  {
+    filter: hue-rotate(-120deg);
+  }
+  100%  {
+    filter: hue-rotate(0deg);
+  }
+}
 </style>
+

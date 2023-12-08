@@ -15,6 +15,7 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	</head>
 	<body>
 		<slot />
@@ -37,6 +38,16 @@ const { title } = Astro.props;
 		background: #13151a;
 		background-size: 224px;
 	}
+	.layout{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  background: radial-gradient(circle, #240015, #12000b );
+  overflow: hidden;
+}
 	code {
 		font-family:
 			Menlo,
